@@ -10,3 +10,4 @@ D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.dll
 D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\refint\SoundVolume.dll
 D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.pdb
 D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\ref\SoundVolume.dll
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.sourcelink.json

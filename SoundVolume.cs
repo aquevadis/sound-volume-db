@@ -66,10 +66,13 @@ public class SoundVolume : BasePlugin, IPluginConfig<ConfigSpecials>
 
                     Server.NextFrame(() =>
                     {
-                        var vol = result?.vol ?? 0.5f;
-                        player.ExecuteClientCommand($"snd_toolvolume {vol}");
-                        player.PrintToChat($"{Localizer["Chat.Prefix"]} {Localizer["Chat.SetVol", vol]}");
-                        PlayerVol[player.Slot] = vol;
+                        if(player.IsValid && player != null) {
+                            var vol = result?.vol ?? 0.5f;
+                            player.ExecuteClientCommand($"snd_toolvolume {(float)vol}");
+                            player.PrintToChat($"{Localizer["Chat.Prefix"]} {Localizer["Chat.SetVol", vol]}");
+                            PlayerVol[player.Slot] = vol;
+                        }
+                        
                     });
                 }
                 catch (Exception ex)
@@ -86,7 +89,9 @@ public class SoundVolume : BasePlugin, IPluginConfig<ConfigSpecials>
             if (Config.PluginEnabled && Config.ForceVolOnSpawn && @event.Userid != null && @event.Userid.IsValid)
             {
                 var player = @event.Userid;
-                player.ExecuteClientCommand($"snd_toolvolume {PlayerVol[player.Slot]}");
+                if(player.IsValid && player != null) {
+                    player.ExecuteClientCommand($"snd_toolvolume {(float)PlayerVol[player.Slot]}");
+                }
             }
             return HookResult.Continue;
         });
