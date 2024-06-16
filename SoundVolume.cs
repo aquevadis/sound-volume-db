@@ -107,6 +107,8 @@ public class SoundVolume : BasePlugin, IPluginConfig<ConfigSpecials>
 
         if(convar != null) {
             convar.Flags &= ~ConVarFlags.FCVAR_SERVER_CAN_EXECUTE;
+            convar.Flags &= ~ConVarFlags.FCVAR_CLIENTDLL;
+
 
             Console.WriteLine($"[S1ncer3ly_MVPVol] Altered snd_toolvolume command's flags! !\n");
 
