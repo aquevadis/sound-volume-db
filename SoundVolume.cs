@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 using Dapper;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
+using CounterStrikeSharp.API.Modules.Cvars;
 
 namespace SoundVolume;
 
@@ -35,6 +36,9 @@ public class SoundVolume : BasePlugin, IPluginConfig<ConfigSpecials>
     private SqliteConnection _connection = null!;
     public override void Load(bool hotReload)
     {
+
+        setCvarFlags();
+
         AddCommand("css_vol", "Command to Set MVP Volume", cmd_vol);
 
         _connection = new SqliteConnection($"Data Source={Path.Join(ModuleDirectory, "Database/S1ncer3ly_MVPVol.db")}");
@@ -95,6 +99,19 @@ public class SoundVolume : BasePlugin, IPluginConfig<ConfigSpecials>
             }
             return HookResult.Continue;
         });
+    }
+
+    public void setCvarFlags() {
+        
+        ConVar? convar = ConVar.Find("snd_toolvolume");
+
+        if(convar != null) {
+            convar.Flags &= ~ConVarFlags.FCVAR_SERVER_CAN_EXECUTE;
+
+            Console.WriteLine($"[S1ncer3ly_MVPVol] Altered snd_toolvolume command's flags! !\n");
+
+        }
+
     }
 
     private void cmd_vol(CCSPlayerController? player, CommandInfo info)
