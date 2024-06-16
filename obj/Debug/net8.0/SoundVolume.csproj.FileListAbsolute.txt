@@ -1,0 +1,12 @@
+D:\bg-koka-hub-plugins\sound-volume-db\bin\Debug\net8.0\SoundVolume.deps.json
+D:\bg-koka-hub-plugins\sound-volume-db\bin\Debug\net8.0\SoundVolume.dll
+D:\bg-koka-hub-plugins\sound-volume-db\bin\Debug\net8.0\SoundVolume.pdb
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.csproj.AssemblyReference.cache
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.GeneratedMSBuildEditorConfig.editorconfig
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.AssemblyInfoInputs.cache
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.AssemblyInfo.cs
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.csproj.CoreCompileInputs.cache
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.dll
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\refint\SoundVolume.dll
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\SoundVolume.pdb
+D:\bg-koka-hub-plugins\sound-volume-db\obj\Debug\net8.0\ref\SoundVolume.dll
